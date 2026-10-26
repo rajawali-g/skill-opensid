@@ -1,7 +1,7 @@
 ﻿# 🏛️ Skill OpenSID untuk Antigravity AI
 
 [![GitHub Repository](https://img.shields.io/badge/GitHub-rajawali--g%2Fskill--opensid-blue?logo=github)](https://github.com/rajawali-g/skill-opensid)
-[![Release Version](https://img.shields.io/badge/Release-v2610.006-brightgreen)](#-riwayat-perubahan-changelog)
+[![Release Version](https://img.shields.io/badge/Release-v2610.007-brightgreen)](#-riwayat-perubahan-changelog)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 [![Target Platform](https://img.shields.io/badge/Platform-Antigravity%20AI-blueviolet)](https://antigravity.google/)
 
@@ -134,11 +134,23 @@ Format versi: **`v[TAG].[RELEASE]`** (Contoh: `v2610.004`)
 
 ---
 
-## 💻 Cara Pemasangan di Antigravity
+## 💻 Cara Pemasangan Instan di Antigravity
+
+Paket siap instalasi tersedia di folder `skill_package/`. Cukup jalankan skrip instalasi otomatis:
 
 ```powershell
-Copy-Item -Recurse -Force ".agents\skills\opensid" "$env:USERPROFILE\.gemini\config\skills\opensid"
+# Jalankan installer otomatis (otomatis pasang ke Global ~/.gemini/config/skills/ dan Workspace)
+.\install-skill.ps1
 ```
+
+Atau jika menggunakan Linux / macOS / WSL:
+```bash
+chmod +x ./skill_package/install-skill.sh
+./skill_package/install-skill.sh
+```
+
+Buku panduan lengkap dan contoh-contoh prompt perintah tersedia di [skill_package/PANDUAN_PENGGUNAAN.md](file:///d:/project_opensid/skill_package/PANDUAN_PENGGUNAAN.md).
+
 
 ---
 
