@@ -1,0 +1,43 @@
+/* Tema OpenSID Modern */
+:root {
+    --primary: #2563eb;
+    --primary-hover: #1d4ed8;
+    --bg-surface: #ffffff;
+    --text-main: #1f2937;
+    --border-color: #e5e7eb;
+}
+
+body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background-color: #f8fafc;
+    color: var(--text-main);
+    margin: 0;
+}
+
+.desa-header {
+    background: #ffffff;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.nav-link {
+    color: #4b5563;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+.nav-link:hover { color: var(--primary); }
+
+.btn-mandiri {
+    background-color: var(--primary);
+    color: #ffffff;
+    padding: 6px 14px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+}
+.btn-mandiri:hover { background-color: var(--primary-hover); }
+
+.widget-box {
+    background: var(--bg-surface);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+}
