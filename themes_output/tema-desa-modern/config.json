@@ -1,0 +1,33 @@
+[
+    {
+        "judul": "Warna Primer Brand",
+        "key": "warna_primer",
+        "value": "#1e40af",
+        "type": "color-picker",
+        "keterangan": "Warna biru profesional instansi pemerintah",
+        "group": "Umum"
+    },
+    {
+        "judul": "Layout Sidebar",
+        "key": "posisi_sidebar",
+        "value": "kanan",
+        "type": "select",
+        "options": {
+            "kanan": "Sidebar Kanan",
+            "kiri": "Sidebar Kiri"
+        },
+        "group": "Tampilan"
+    },
+    {
+        "judul": "Jumlah Berita Per Halaman",
+        "key": "jumlah_berita_perhalaman",
+        "value": 8,
+        "type": "input-number",
+        "attributes": {
+            "min": 4,
+            "max": 24,
+            "step": 4
+        },
+        "group": "Berita"
+    }
+]

@@ -1,7 +1,7 @@
 ﻿# 🏛️ Skill OpenSID untuk Antigravity AI
 
 [![GitHub Repository](https://img.shields.io/badge/GitHub-rajawali--g%2Fskill--opensid-blue?logo=github)](https://github.com/rajawali-g/skill-opensid)
-[![Release Version](https://img.shields.io/badge/Release-v2610.003-brightgreen)](#-riwayat-perubahan-changelog)
+[![Release Version](https://img.shields.io/badge/Release-v2610.004-brightgreen)](#-riwayat-perubahan-changelog)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 [![Target Platform](https://img.shields.io/badge/Platform-Antigravity%20AI-blueviolet)](https://antigravity.google/)
 
@@ -11,12 +11,11 @@ Paket keahlian (*AI Skill*) terlengkap untuk agen **Antigravity AI** dalam meman
 
 ## 📌 Daftar Isi
 - [Fitur Utama](#-fitur-utama)
-- [Struktur & Cakupan Skill](#-struktur--cakupan-skill)
+- [3 Tema Dasar Resmi Siap Pakai](#-3-tema-dasar-resmi-siap-pakai)
 - [Fitur 1: Informasi Versi OpenSID dari GitHub](#-fitur-1-informasi-versi-opensid-dari-github)
-- [Fitur 2: Folder Khusus Output Pembuatan Tema](#-fitur-2-folder-khusus-output-pembuatan-tema)
+- [Fitur 2: Folder Khusus Output Tema & Packager ZIP](#-fitur-2-folder-khusus-output-tema--packager-zip)
 - [Sistem Penomoran Versi (TAG & RELEASE)](#-sistem-penomoran-versi-tag--release)
 - [Skrip Otomatisasi Release](#-skrip-otomatisasi-release)
-- [Panduan Integrasi ke GitHub](#-panduan-integrasi-ke-github)
 - [Cara Pemasangan di Antigravity](#-cara-pemasangan-di-antigravity)
 - [Riwayat Perubahan (Changelog)](#-riwayat-perubahan-changelog)
 
@@ -24,12 +23,24 @@ Paket keahlian (*AI Skill*) terlengkap untuk agen **Antigravity AI** dalam meman
 
 ## 💡 Fitur Utama
 
+- 🎨 **3 Tema Dasar Siap Pakai**: Pedesaan Klasik, Desa Modern, dan Desa Digital (Smart Village) berstandar resmi Laravel Blade.
 - 🔄 **Sinkronisasi Versi GitHub Realtime**: Pelacakan otomatis rilis publik OpenSID Umum terkini (`OpenSID/OpenSID`), syarat PHP, ekstensi, dan dependensi backend/frontend.
-- 🎨 **Folder Khusus Output Pembuatan Tema (`themes_output/`)**: Generator tema desa instan, pengemasan otomatis ke file `.zip` siap unggah via Web Admin OpenSID, dan sinkronisasi ke folder `desa/themes/`.
+- 📦 **Folder Khusus Output Tema (`themes_output/`)**: Generator tema desa instan, pengemasan otomatis ke file `.zip` siap unggah via Web Admin OpenSID.
 - 🧩 **Arsitektur Ganda (Hybrid)**: Memandu integrasi modern **Laravel Components** (`illuminate/*`) dan fondasi teruji **CodeIgniter 3** (`donjo-app`).
-- 🛡️ **Aturan Wilayah Kustomisasi `desa/`**: Memastikan kustomisasi konfigurasi, tema, surat, dan upload aman dari penimpaan saat update sistem.
 - 📜 **Layanan Surat & TTE**: Kamus lengkap kode variabel isian kependudukan dokumen ODT (LibreOffice) / RTF dan integrasi tanda tangan elektronik.
 - 👥 **Kamus Database Kependudukan**: Relasi master tabel `tweb_penduduk`, `tweb_keluarga`, `tweb_wil_clusterdesa`, log surat, dan konfigurasi profil desa.
+
+---
+
+## 🎨 3 Tema Dasar Resmi Siap Pakai
+
+Telah disediakan 3 tema dasar pengembangan dengan arsitektur resmi Laravel Blade (`resources/views/`, `config.json`, `composer.json`, `theme::` namespace):
+
+| Tema | Nuansa Desain | Berkas ZIP Siap Unggah |
+| :--- | :--- | :--- |
+| **🌾 Pedesaan Klasik** | Kearifan lokal, agraris, palet hangat hijau daun & kayu, ramah warga lansia | `themes_output/tema-pedesaan-klasik.zip` |
+| **🏛️ Desa Modern** | Pemerintahan bersih, elegan, kartu soft shadow, tata kelola transparan | `themes_output/tema-desa-modern.zip` |
+| **⚡ Desa Digital** | *Smart Village* futuristik, live counter statistik, kartu *glassmorphism*, neon cyan | `themes_output/tema-desa-digital.zip` |
 
 ---
 
@@ -42,22 +53,30 @@ skill-opensid/
 │   ├── data/
 │   │   └── opensid_latest_info.json  # Cache data rilis & stack OpenSID terkini
 │   ├── references/                   # Dokumentasi teknis terperinci
+│   │   ├── arsitektur-tema-opensid.md # Bedah arsitektur resmi tema Blade (Esensi & Natra)
 │   │   ├── opensid-version-info.md   # Info rilis resmi GitHub, PHP & stack
+│   │   ├── themes-and-views.md       # Panduan tema & katalog 3 tema dasar
 │   │   ├── architecture.md           # Arsitektur sistem (Laravel + CI + folder desa/)
 │   │   ├── modules-development.md    # Pembuatan modul, controller, model, migration
-│   │   ├── themes-and-views.md       # Panduan tema & output themes_output/
 │   │   ├── surat-dan-pelayanan.md    # Kamus kode variabel surat ODT & alur TTE
 │   │   ├── database-kependudukan.md  # Relasi tabel kependudukan & wilayah
 │   │   └── deployment-troubleshooting.md # Instalasi (Laragon/Linux), error umum, permission
 │   ├── scripts/
 │   │   ├── fetch_opensid_info.py     # Pengambil data rilis GitHub API
+│   │   ├── build_three_themes.py     # Builder 3 tema dasar resmi
 │   │   └── theme_manager.py          # Generator & packager ZIP tema
 │   └── examples/
 │       ├── contoh-modul.md           # Contoh modul starter
 │       └── template-surat-keterangan.md # Contoh kode isian template ODT
 ├── themes_output/                    # FOLDER KHUSUS OUTPUT PEMBUATAN TEMA
-│   ├── tema-starter-minsel/          # Kode sumber tema lengkap hasil kreasi
-│   └── tema-starter-minsel.zip       # Paket ZIP siap unggah ke admin OpenSID
+│   ├── tema-pedesaan-klasik/         # Kode sumber tema pedesaan klasik
+│   ├── tema-pedesaan-klasik.zip      # Paket ZIP siap pasang (8.4 KB)
+│   ├── tema-desa-modern/             # Kode sumber tema desa modern
+│   ├── tema-desa-modern.zip          # Paket ZIP siap pasang (7.7 KB)
+│   ├── tema-desa-digital/            # Kode sumber tema smart village
+│   ├── tema-desa-digital.zip         # Paket ZIP siap pasang (8.3 KB)
+│   └── tema-starter-minsel/          # Tema starter
+├── standard/                         # Repositori acuan tema standar bawaan (Esensi & Natra)
 ├── update-opensid-info.ps1           # Shortcut update data versi GitHub
 ├── manage-theme.ps1                  # Shortcut generator & packager tema
 ├── release.ps1                       # Skrip otomatisasi versi TAG & RELEASE
@@ -69,19 +88,12 @@ skill-opensid/
 
 ## 🔄 Fitur 1: Informasi Versi OpenSID dari GitHub
 
-Fitur ini mengambil langsung data rilis umum (non-premium) dari repositori resmi [OpenSID/OpenSID](https://github.com/OpenSID/OpenSID):
-
-### Cara Menjalankan Sinkronisasi:
 ```powershell
 .\update-opensid-info.ps1
 ```
-
-### Data yang Diperoleh Otomatis:
 - **Versi Rilis Terkini**: `v2607.0.1` (Rilis Publik)
 - **Persyaratan PHP**: `^8.1` (Rekomendasi: PHP 8.2)
 - **Ekstensi PHP Wajib**: `curl`, `gd`, `intl`, `mbstring`, `mysqli`, `pdo_mysql`, `zip`, `fileinfo`, `xml`, `bcmath`, `exif`.
-- **Backend Stack**: Hybrid Architecture (`codeigniter/framework` + Laravel `illuminate/*` components: Database, Auth, View, Cache, Spatie ActivityLog, Yajra DataTables).
-- **Frontend Stack**: AdminLTE, Leaflet.js WebGIS, Bootstrap, TinyMCE, Select2, DataTables.
 
 ---
 
@@ -92,29 +104,23 @@ Semua hasil pembuatan tema web desa ditampung secara terpusat di folder `themes_
 ### Perintah Cepat Pengelola Tema (`manage-theme.ps1`):
 ```powershell
 # 1. Buat kerangka tema baru
-.\manage-theme.ps1 new -Name "minsel-modern" -Title "Tema Minsel Modern"
+.\manage-theme.ps1 new -Name "nama-tema" -Title "Judul Tema"
 
 # 2. Kemas tema ke format ZIP siap unggah
-.\manage-theme.ps1 package -Name "minsel-modern"
+.\manage-theme.ps1 package -Name "nama-tema"
 
 # 3. Lihat daftar tema yang tersedia
 .\manage-theme.ps1 list
 
 # 4. Sinkronkan langsung ke OpenSID lokal (Laragon/XAMPP)
-.\manage-theme.ps1 deploy -Name "minsel-modern" -Target "D:\laragon\www\opensid"
+.\manage-theme.ps1 deploy -Name "nama-tema" -Target "D:\laragon\www\opensid"
 ```
-
-### Cara Memasang Tema di OpenSID:
-1. Buka Web Admin OpenSID.
-2. Masuk ke menu **Pengaturan Web > Tema**.
-3. Klik tombol **Unggah Tema**.
-4. Pilih berkas dari `themes_output/<nama_tema>.zip`.
 
 ---
 
 ## 🏷️ Sistem Penomoran Versi (TAG & RELEASE)
 
-Format versi: **`v[TAG].[RELEASE]`** (Contoh: `v2610.002`)
+Format versi: **`v[TAG].[RELEASE]`** (Contoh: `v2610.004`)
 - **`TAG` (YYMM)**: 4 digit tahun dan bulan (`2610` = Oktober 2026).
 - **`RELEASE` (XXX)**: 3 digit nomor urut rilis berurutan pada periode bulan tersebut (`001`, `002`, dst).
 
@@ -123,31 +129,38 @@ Format versi: **`v[TAG].[RELEASE]`** (Contoh: `v2610.002`)
 ## 🚀 Skrip Otomatisasi Release
 
 ```powershell
-.\release.ps1 -Message "Penambahan Fitur 1 (Update Versi GitHub) dan Fitur 2 (Output Tema)"
+.\release.ps1 -Message "Catatan perubahan rilis..."
 ```
 
 ---
 
 ## 💻 Cara Pemasangan di Antigravity
 
-### Pemasangan Global:
 ```powershell
 Copy-Item -Recurse -Force ".agents\skills\opensid" "$env:USERPROFILE\.gemini\config\skills\opensid"
 ```
-Setelah disalin, skill akan aktif secara permanen di seluruh sesi Antigravity AI.
 
 ---
 
 ## 📝 Riwayat Perubahan (Changelog)
 
-### [v2610.002] - 2026-10-26
-- **TAG**: `2610` | **RELEASE**: `002`
+### [v2610.004] - 2026-10-26
+- **TAG**: `2610` | **RELEASE**: `004`
 - **Added**:
-  - **Fitur 1**: Skrip `fetch_opensid_info.py` dan shortcut `update-opensid-info.ps1` untuk mengambil data rilis resmi OpenSID umum, spesifikasi PHP, backend stack (Laravel & CI3), dan frontend stack dari GitHub `OpenSID/OpenSID`.
-  - Berkas data terstruktur `data/opensid_latest_info.json` dan referensi dinamis `references/opensid-version-info.md`.
-  - **Fitur 2**: Folder khusus output pembuatan tema desa (`themes_output/`).
-  - Skrip utilitas tema `theme_manager.py` dan shortcut `manage-theme.ps1` untuk membuat tema, mengompresi ke ZIP siap upload, dan deploy ke OpenSID.
-  - Tema starter contoh: `themes_output/tema-starter-minsel` beserta arsip `themes_output/tema-starter-minsel.zip`.
+  - Pembangunan 3 tema dasar baru siap pakai di `themes_output/`:
+    1. **`tema-pedesaan-klasik`** (`themes_output/tema-pedesaan-klasik.zip`): Kearifan lokal, agraris, ramah warga.
+    2. **`tema-desa-modern`** (`themes_output/tema-desa-modern.zip`): Tata kelola pemerintahan bersih, sleek, elegan.
+    3. **`tema-desa-digital`** (`themes_output/tema-desa-digital.zip`): Smart village, live stats counter, glassmorphism, neon cyan.
+  - Skrip builder otomatis `build_three_themes.py`.
+  - Pembaruan dokumentasi katalog tema di `references/themes-and-views.md`.
+
+### [v2610.003] - 2026-10-26
+- Bedah arsitektur resmi tema OpenSID dari tema default `esensi` dan `natra` di folder `standard/`.
+- Dokumentasi teknis `references/arsitektur-tema-opensid.md` (Laravel Blade, `theme::` namespace, `config.json`, `composer.json`).
+- Standardisasi generator `theme_manager.py` ke Laravel Blade.
+
+### [v2610.002] - 2026-10-26
+- Penambahan Fitur 1 (Update Versi GitHub) dan Fitur 2 (Folder Output Tema `themes_output/`).
 
 ### [v2610.001] - 2026-10-26
-- Inisialisasi awal repositori `skill-opensid` dan paket skill dasar.
+- Inisialisasi awal repositori `skill-opensid`.

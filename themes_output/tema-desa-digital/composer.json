@@ -1,0 +1,17 @@
+{
+    "name": "themes/tema-desa-digital",
+    "type": "library",
+    "description": "Tema Desa Digital untuk OpenSID",
+    "license": "GPL-3.0-or-later",
+    "keywords": [
+        "Themes",
+        "OpenSID",
+        "tema-desa-digital"
+    ],
+    "authors": [
+        {
+            "name": "Diskominfo - Smart Village Center",
+            "email": "desa@minselkab.go.id"
+        }
+    ]
+}

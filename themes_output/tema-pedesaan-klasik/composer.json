@@ -1,0 +1,17 @@
+{
+    "name": "themes/tema-pedesaan-klasik",
+    "type": "library",
+    "description": "Tema Pedesaan Klasik untuk OpenSID",
+    "license": "GPL-3.0-or-later",
+    "keywords": [
+        "Themes",
+        "OpenSID",
+        "tema-pedesaan-klasik"
+    ],
+    "authors": [
+        {
+            "name": "Diskominfo - Tim Budaya Desa",
+            "email": "desa@minselkab.go.id"
+        }
+    ]
+}

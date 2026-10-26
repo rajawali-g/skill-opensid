@@ -1,0 +1,30 @@
+[
+    {
+        "judul": "Warna Aksen Alam",
+        "key": "warna_aksen",
+        "value": "#15803d",
+        "type": "color-picker",
+        "keterangan": "Warna aksen hijau daun / alam pedesaan",
+        "group": "Umum"
+    },
+    {
+        "judul": "Salam Sambutan Kepala Desa",
+        "key": "salam_kades",
+        "value": "Tabea! Selamat datang di website resmi desa kami. Mari bersama membangun desa yang tenteram, rukun, dan sejahtera.",
+        "type": "text",
+        "keterangan": "Teks sambutan hangat di bagian atas website",
+        "group": "Sambutan"
+    },
+    {
+        "judul": "Jumlah Berita Per Halaman",
+        "key": "jumlah_berita_perhalaman",
+        "value": 6,
+        "type": "input-number",
+        "attributes": {
+            "min": 3,
+            "max": 18,
+            "step": 3
+        },
+        "group": "Berita"
+    }
+]

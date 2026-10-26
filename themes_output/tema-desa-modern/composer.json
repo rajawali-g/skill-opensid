@@ -1,0 +1,17 @@
+{
+    "name": "themes/tema-desa-modern",
+    "type": "library",
+    "description": "Tema Desa Modern untuk OpenSID",
+    "license": "GPL-3.0-or-later",
+    "keywords": [
+        "Themes",
+        "OpenSID",
+        "tema-desa-modern"
+    ],
+    "authors": [
+        {
+            "name": "Diskominfo - Tata Kelola Desa",
+            "email": "desa@minselkab.go.id"
+        }
+    ]
+}
