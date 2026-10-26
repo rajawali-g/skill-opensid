@@ -1,0 +1,17 @@
+/* Stylesheet Tema Resmi OpenSID */
+:root {
+    --primary: #2563eb;
+    --primary-hover: #1d4ed8;
+    --text-main: #1f2937;
+    --bg-main: #f8fafc;
+}
+
+body {
+    background-color: var(--bg-main);
+    color: var(--text-main);
+    line-height: 1.6;
+}
+
+.nav-link {
+    transition: color 0.2s ease-in-out;
+}

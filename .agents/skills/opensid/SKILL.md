@@ -37,8 +37,9 @@ Buka file referensi berikut sesuai dengan kebutuhan tugas Anda:
 | Topik / Kebutuhan | File Referensi |
 | :--- | :--- |
 | **Info Versi & Stack Resmi (GitHub)** | [references/opensid-version-info.md](references/opensid-version-info.md) |
+| **Arsitektur Resmi Tema (Esensi & Natra)** | [references/arsitektur-tema-opensid.md](references/arsitektur-tema-opensid.md) |
 | **Tema Publik & Folder `themes_output/`** | [references/themes-and-views.md](references/themes-and-views.md) |
-| **Arsitektur & Struktur Folder** | [references/architecture.md](references/architecture.md) |
+| **Arsitektur & Struktur Folder Sistem** | [references/architecture.md](references/architecture.md) |
 | **Pembuatan Modul Kustom** | [references/modules-development.md](references/modules-development.md) |
 | **Layanan Surat & Variabel ODT/RTF** | [references/surat-dan-pelayanan.md](references/surat-dan-pelayanan.md) |
 | **Kamus Database Kependudukan** | [references/database-kependudukan.md](references/database-kependudukan.md) |

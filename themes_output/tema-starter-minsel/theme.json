@@ -1,9 +1,0 @@
-{
-    "name": "Tema Starter Minsel Cerdas",
-    "slug": "tema-starter-minsel",
-    "version": "1.0.0",
-    "author": "Tim Pengembang Desa",
-    "description": "Tema web desa modern responsif dengan integrasi WebGIS Leaflet dan transparansi APBDes",
-    "parent": "natra",
-    "created_at": "2026-10-26"
-}

@@ -1,0 +1,16 @@
+{
+    "name": "themes/tema-starter-minsel",
+    "type": "library",
+    "description": "Tema Starter Minsel Cerdas untuk OpenSID",
+    "license": "GPL-3.0-or-later",
+    "keywords": [
+        "Themes",
+        "OpenSID"
+    ],
+    "authors": [
+        {
+            "name": "Tim Pengembang Desa",
+            "email": "desa@minselkab.go.id"
+        }
+    ]
+}
