@@ -1,7 +1,7 @@
 ﻿# 🏛️ Skill OpenSID untuk Antigravity AI
 
 [![GitHub Repository](https://img.shields.io/badge/GitHub-rajawali--g%2Fskill--opensid-blue?logo=github)](https://github.com/rajawali-g/skill-opensid)
-[![Release Version](https://img.shields.io/badge/Release-v2610.007-brightgreen)](#-riwayat-perubahan-changelog)
+[![Release Version](https://img.shields.io/badge/Release-v2610.008-brightgreen)](#-riwayat-perubahan-changelog)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 [![Target Platform](https://img.shields.io/badge/Platform-Antigravity%20AI-blueviolet)](https://antigravity.google/)
 
